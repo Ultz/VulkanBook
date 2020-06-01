@@ -20,8 +20,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: dante-ev/latex-action@v0.2.0
+    - uses: xu-cheng/latex-action@v2
       with:
-        root_file: $GITHUB_WORKSPACE/main.tex
-        compiler: pdflatex
-        args: -pdf
+        root_file: main.tex
+        working_directory: $GITHUB_WORKSPACE
+        compiler: latexmk
