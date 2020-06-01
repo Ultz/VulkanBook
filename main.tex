@@ -1,0 +1,98 @@
+\documentclass[12pt]{book}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{tocloft,pgffor,sectsty}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\hypersetup{hidelinks=true}
+
+\definecolor{commentcolor}{RGB}{133, 196, 108}
+\definecolor{keywordcolor}{RGB}{156, 149, 235}
+\definecolor{typecolor}{RGB}{193, 145, 255}
+\definecolor{stringcolor}{RGB}{201, 162, 109}
+\definecolor{backgroundcolor}{RGB}{40, 40, 40}
+\lstdefinestyle{csharp}{
+language=csh,
+basicstyle=\color{white}\footnotesize\ttfamily,
+numbers=left,
+numberstyle=\color{white}\tiny,
+numbersep=5pt,
+tabsize=1,
+extendedchars=true,
+breaklines=false,
+stringstyle=\color{stringcolor}\ttfamily,
+showspaces=false,
+showtabs=false,
+xleftmargin=17pt,
+framexleftmargin=17pt,
+framexrightmargin=5pt,
+framexbottommargin=4pt,
+commentstyle=\color{commentcolor},
+morecomment=[l]{//},
+morecomment=[s]{/*}{*/},
+showstringspaces=false,
+morekeywords={ abstract, event, new, struct,
+as, explicit, null, switch,
+base, extern, object, this,
+bool, false, operator, throw,
+break, finally, out, true,
+byte, fixed, override, try,
+case, float, params, typeof,
+catch, for, private, uint,
+char, foreach, protected, ulong,
+checked, goto, public, unchecked,
+class, if, readonly, unsafe,
+const, implicit, ref, ushort,
+continue, in, return, using,
+decimal, int, sbyte, virtual,
+default, interface, sealed, volatile,
+delegate, internal, short, void,
+do, is, sizeof, while,
+double, lock, stackalloc,
+else, long, static,
+enum, namespace, string},
+keywordstyle=\color{keywordcolor},
+identifierstyle=\color{typecolor},
+backgroundcolor=,
+}
+
+\setcounter{tocdepth}{3}
+\renewcommand{\chaptername}{\textsf{Chapter}}
+\renewcommand{\cftpartfont}{\normalfont\sffamily\bfseries}
+\renewcommand{\cftchapfont}{\normalfont\large\itshape}
+\renewcommand{\cftsecfont}{\normalfont\slshape}
+\renewcommand{\cftsubsecfont}{\normalfont\itshape}
+\renewcommand{\cftsubsubsecfont}{\normalfont\small}
+\renewcommand{\partfont}{\normalfont\Huge\bfseries}
+\renewcommand{\chapterfont}{\normalfont\huge\bfseries}
+\renewcommand{\sectionfont}{\normalfont\LARGE\bfseries}
+\renewcommand{\contentsname}{\textsf{Table of Contents}}
+\renewcommand\thechapter{\textsf{\arabic{chapter}}}
+\renewcommand\thesection{\textsf{\arabic{section}}}
+\renewcommand\thesubsection{\textsf{\thesection.\arabic{subsection}}}
+
+\begin{document}
+\includepdf[width=\paperwidth,height=\paperheight]{images/cover.png}
+\newpage
+\tableofcontents
+\include{chapters/example}
+\include{chapters/chap1_Introduction}
+\include{chapters/chap2_MathematicsPrinciples}
+\include{chapters/chap3_GraphicsPrinciples}
+\include{chapters/chap4_InitialSetup}
+\include{chapters/chap5_Shaders}
+\include{chapters/chap6_Pipelines}
+\include{chapters/chap7_RenderPasses}
+\include{chapters/chap8_Drawing}
+\include{chapters/chap9_ProjectGuidance}
+\include{chapters/chap10_Textures}
+\include{chapters/chap11_AdvancedTextures}
+\include{chapters/chap12_Mapping}
+\include{chapters/chap13_Instancing}
+\include{chapters/chap14_Tessellation}
+
+\end{document}
