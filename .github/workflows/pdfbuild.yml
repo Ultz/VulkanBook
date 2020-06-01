@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: LatexPDFBuild
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -22,5 +22,6 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: dante-ev/latex-action@v0.2.0
       with:
-        root_file: main.tex
+        root_file: $GITHUB_WORKSPACE/main.tex
         compiler: xelatex
+        args: -pdf
