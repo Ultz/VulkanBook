@@ -1,20 +1,26 @@
-\documentclass[12pt]{book}
+\documentclass[a4paper,12pt]{book}
 \usepackage[top=2cm,bottom=4cm,left=2cm,right=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{fancyhdr}
-\usepackage{tocloft,pgffor,sectsty}
 \usepackage{color}
 \usepackage{listings}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{tocloft,pgffor}
+\usepackage{svg}
+\usepackage{sectsty}
 
-\hypersetup{hidelinks=true}
+\sectionfont{\usefont{OT1}{phv}{bc}{n}\selectfont}
+\subsectionfont{\usefont{OT1}{phv}{bc}{n}\selectfont}
 
-\definecolor{commentcolor}{RGB}{133, 196, 108}
+\definecolor{commentcolor}{RGB}{163, 226, 138}
 \definecolor{keywordcolor}{RGB}{156, 149, 235}
 \definecolor{typecolor}{RGB}{193, 145, 255}
 \definecolor{stringcolor}{RGB}{201, 162, 109}
 \definecolor{backgroundcolor}{RGB}{40, 40, 40}
+\definecolor{alertcolor}{RGB}{251, 237, 187}
 
 \lstdefinestyle{csharp}{
     language=csh,
@@ -47,7 +53,7 @@
     char, foreach, protected, ulong,
     checked, goto, public, unchecked,
     class, if, readonly, unsafe,
-    const, implicit, ref, ushort,
+    const, implicit, ref, ushort,\usepackage{titlesec}
     continue, in, return, using,
     decimal, int, sbyte, virtual,
     default, interface, sealed, volatile,
@@ -94,6 +100,7 @@
     backgroundcolor=,
 }
 
+
 \setcounter{tocdepth}{3}
 \renewcommand{\chaptername}{\textsf{Chapter}}
 \renewcommand{\cftpartfont}{\normalfont\sffamily\bfseries}
@@ -101,15 +108,13 @@
 \renewcommand{\cftsecfont}{\normalfont\slshape}
 \renewcommand{\cftsubsecfont}{\normalfont\itshape}
 \renewcommand{\cftsubsubsecfont}{\normalfont\small}
-\renewcommand{\partfont}{\normalfont\Huge\bfseries}
-\renewcommand{\chapterfont}{\normalfont\huge\bfseries}
-\renewcommand{\sectionfont}{\normalfont\LARGE\bfseries}
 \renewcommand{\contentsname}{\textsf{Table of Contents}}
 \renewcommand\thechapter{\textsf{\arabic{chapter}}}
 \renewcommand\thesection{\textsf{\arabic{section}}}
 \renewcommand\thesubsection{\textsf{\thesection.\arabic{subsection}}}
 
 \begin{document}
+  
 \includepdf[width=\paperwidth,height=\paperheight]{images/cover.png}
 \newpage
 \tableofcontents

@@ -1,30 +1,59 @@
-\chapter{Example}
-
-This chapter is specifically made for demonstration on how to add various elements to the book and this chapter \textbf{SHOULD NOT} be included in the final copy of the book.
-
-\begin{figure}[ht]
-    \centering
-    \colorbox{backgroundcolor}{
-        \parbox{0.9\textwidth}{
-            \lstinputlisting[language=csh,style=csharp]
-            {code/examples/Snippet1.cs}
+\chapter*{\textsf{Example}}
+\paragraph{
+    This chapter is specifically made for demonstration on how to add various elements to the book and this chapter \textbf{SHOULD NOT} be included in the final copy of the book.
+}
+\paragraph{
+    Make sure to add figures for any images, because a figure table will be generated at the end of the book for easy look up.
+}
+\begin{frame}{}
+    \begin{figure}[!ht]
+        \centering
+        \colorbox{backgroundcolor}{
+            \parbox{0.9\textwidth}{
+                \lstinputlisting[language=csh,style=csharp]
+                {code/examples/Snippet1.cs}
+            }
         }
-    }
-    \caption{Example C\# Snippet}
-    \label{fig:example_cs_snippet}
-\end{figure}
-
-
-Make sure to add figures.
-
-\begin{figure}[ht]
-    \centering
-    \colorbox{backgroundcolor}{
-        \parbox{0.9\textwidth}{
-            \lstinputlisting[language=GLSL]
-            {code/examples/Snippet2.glsl}
+        \caption{Example C\# Snippet}
+        \label{fig:example_cs_snippet}
+    \end{figure}
+\end{frame}
+\begin{frame}{}
+    \begin{figure}[!ht]
+        \centering
+        \colorbox{backgroundcolor}{
+            \parbox{0.9\textwidth}{
+                \lstinputlisting[language=GLSL]
+                {code/examples/Snippet2.glsl}
+            }
         }
-    }
-    \caption{Example GLSL Snippet}
-    \label{fig:example_glsl_snippet}
-\end{figure}
+        \caption{Example GLSL Snippet}
+        \label{fig:example_glsl_snippet}
+    \end{figure}
+\end{frame}
+\paragraph{
+    Also if for any reason you wish to make placement of figure between 2 paragraphs, there are two ways to accomplish it depending on your intent:
+}
+\paragraph{
+    Enclose your figure inside \\begin\{frame\}\{\} and \\end\{frame\} to ensure it is strictly placed between 2 paragraphs.
+}
+\paragraph{
+    Another way is assuming that you want figure to be placed on the side of a paragraph is to use \\begin\{wrapfigure\}\{r\}\{0.5\\textwidth\} and \\end\{wrapfigure\} instead of figure begin/end.
+}
+\section*{References}
+
+\paragraph{
+    Also for references.bib, look into \href{https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex}{here} for more information on how to add references for book, article, and other information to be used in this book.
+}
+
+\newpage
+
+\section*{Comment Bubbles}
+
+\colorbox{commentcolor}{\parbox{.25\textwidth}{
+    The quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog.
+}}
+
+\colorbox{alertcolor}{\parbox{.25\textwidth}{
+    The quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog.
+}}
