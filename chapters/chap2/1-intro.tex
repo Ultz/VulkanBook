@@ -1,42 +1,23 @@
-\paragraph{
-    For almost any non-trivial graphical program, geometry will need to be moved across the screen. The simplest way to do that would be to update the geometry's vertices to the new position, but constantly sending new data to the graphics card is very slow, and not feasible for a large-scale program.
-}
+For almost any non-trivial graphical program, geometry will need to be moved across the screen. The simplest way to do that would be to update the geometry's vertices to the new position, but constantly sending new data to the graphics card is very slow, and not feasible for a large-scale program.
 
-\paragraph{
-    In addition, Normalized Device Coordinates are too abstract for most graphical work. For example, drawing an image at the proper size is nearly impossible when all you have are NDC. Wouldn't it be easier to use a different coordinates system?
-}
+In addition, Normalized Device Coordinates are too abstract for most graphical work. For example, drawing an image at the proper size is nearly impossible when all you have are NDC. Wouldn't it be easier to use a different coordinates system?
 
-\paragraph{
-    The answer to both problems comes in the form of linear algebra. This chapter will be a \emph{brief} introduction to the concept, and how it relates to graphics programming. If you find the topic interesting and want to know more, it is heavily recommended that you continue studying outside of this book. Several potentially-useful things (such as quaternions) are omitted here for brevity.
-}
+The answer to both problems comes in the form of linear algebra. This chapter will be a \textbf{brief} introduction to the concept, and how it relates to graphics programming. If you find the topic interesting and want to know more, it is heavily recommended that you continue studying outside of this book. Several potentially-useful things (such as quaternions) are omitted here for brevity.
 
-\paragraph{
-    With that said, let's begin!
-}
+With that said, let's begin!
 
 \section{\textsf{OpenGL Mathematics Library (GLM)}}
-\paragraph{
-    This tutorial is provided in C++, a language that does not include built-in linear algebra. Instead, we will use an external library: OpenGL Mathematics Library, or GLM for short. Despite the name, it will work for Vulkan just fine, as the mathematics required are the same. Download from here:
-}
+This tutorial is provided in C++, a language that does not include built-in linear algebra. Instead, we will use an external library: OpenGL Mathematics Library, or GLM for short. Despite the name, it will work for Vulkan just fine, as the mathematics required are the same. Download from here:
 
-\paragraph{
-    \href{https://glm.g-truc.net/0.9.8/index.html}{https://glm.g-truc.net/0.9.8/index.html}
-}
+\href{https://glm.g-truc.net/0.9.8/index.html}{https://glm.g-truc.net/0.9.8/index.html}
 
-\paragraph{
-    At the time of writing, version 0.9.9.8 is the current stable release. If you encounter problems, be certain that you use the same version as we do.
-}
+At the time of writing, version 0.9.9.8 is the current stable release. If you encounter problems, be certain that you use the same version as we do.
 
-\paragraph{
-    GLM is a header-only library, so no compiling or linking are necessary. Just download and copy the header folder into your includes folder.
-}
+GLM is a header-only library, so no compiling or linking are necessary. Just download and copy the header folder into your includes folder.
 
-\paragraph{
-    To ensure that it works, try running the following code:
-}
+To ensure that it works, try running the following code:
 
-\begin{frame}{}
-    \begin{figure}[ht]
+\begin{figure}[ht]
     \centering
     \colorbox{backgroundcolor}{
         \parbox{0.9\textwidth}{
@@ -46,9 +27,6 @@
     }
     \caption{GLM test snippet}
     \label{fig:glm_snippet}
-    \end{figure}
-\end{frame}
+\end{figure}
 
-\paragraph{
-    If GLM has been installed correctly, this code should print "{1.0, 1.0, 0.0, 2.0}".
-}
+If GLM has been installed correctly, this code should print "{1.0, 1.0, 0.0, 2.0}".
