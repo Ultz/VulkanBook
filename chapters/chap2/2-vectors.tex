@@ -1,4 +1,4 @@
-\section{Introduction to Vectors}
+\section{\textsf{Introduction to Vectors}}
 \paragraph{
     In mathematics, a vector is a list of elements. A single element on its own is known as a scalar. A vector is basically a one-dimensional array of elements.
 }
@@ -47,7 +47,7 @@
     So, what can you do with a vector? Let's start with basic vector arithmetic.
 }
 
-\subsection{Scalar operations}
+\subsection{\textsf{Scalar operations}}
 \paragraph{
     Scalar operations refer to any operation that uses both a scalar (a single element) and a vector (multiple elements). Simply put, the scalar is applied to each element of the vector separately. For example:
 }
@@ -92,7 +92,7 @@
     \end{figure}
 \end{frame}
 
-\subsection{Vector operations}
+\subsection{\textsf{Vector operations}}
 \paragraph{
     Vector operations are any operation that uses two vectors. The operation is applied to each element of the vector (X with X, Y with Y, etc.).
 }
@@ -142,7 +142,7 @@
     \end{figure}
 \end{frame}
 
-\subsection{Length of Vectors}
+\subsection{\textsf{Length of Vectors}}
 \paragraph{
     The length of a vector is something very important to know for several different reasons. The length of a vector is notated as follows:
 }
@@ -205,7 +205,7 @@
     \end{figure}
 \end{frame}
 
-\subsection{Unit vectors}
+\subsection{\textsf{Unit vectors}}
 A unit vector is a vector whose length is 1. Every vector has a non-zero unit vector, which can be found by dividing a vector by its length:
 
 \paragraph{
@@ -236,7 +236,7 @@ A unit vector is a vector whose length is 1. Every vector has a non-zero unit ve
     \end{figure}
 \end{frame}
 
-\section{Vector products}
+\section{\textsf{Vector products}}
 \paragraph{
     Vector addition and subtraction are both very simple, but what of multiplication? It's not quite as easy. For a number of mathematical reasons that are beyond the scope of this book, multiplying component-wise isn't correct.
 }
@@ -300,21 +300,23 @@ A unit vector is a vector whose length is 1. Every vector has a non-zero unit ve
     \end{figure}
 \end{frame}
 
-\subsection{Cross product}
+\subsection{\textsf{Cross product}}
 \paragraph{
     The cross product (defined with the multiplication sign, $\times$) isn't quite as commonly-used as the dot product, but it's still important to know. Unlike other vector operations, where any vector sizes are permitted so long as they are the same, cross products are only defined for vectors with three elements.
 }
 
+\begin{sloppypar}
 \paragraph{
-    When used with two vectors that are orthogonal to each other, the resulting vector is orthogonal to both.
-    To put it simply, if one vector is X, and another is Y, the cross product will give you Z. This is best demonstrated via an image:
+    When used with two vectors that are orthogonal to each other, the resulting vector is orthogonal to both. To put it simply, if one vector is X, and another is Y, the cross product will give you Z. This is best demonstrated via an image:
 }
+\end{sloppypar}
 
 \begin{frame}{}
     \begin{figure}[ht]
       \centering
-      \includegraphics[width=0.25\textwidth]{images/chap2/CrossProduct.png}
-      \caption{Cross Product. Original image taken from Wikipedia, and licensed under the public domain.}
+      \includegraphics[width=0.21\textwidth]{images/chap2/CrossProduct.png}
+      \caption*{\footnotesize Original image taken from Wikipedia, and licensed under the public domain.}
+      \caption{Cross Product.}
       \label{fig:cross_product}
     \end{figure}
 \end{frame}
